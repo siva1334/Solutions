@@ -1,3 +1,10 @@
+/*
+Given N points of the form (xi,yi) on a 2-D plane.
+
+From each point, you draw 2 lines one horizontal and one vertical.
+Now some of the lines may overlap each other, therefore you are required to print the number of distinct lines you can see on the plane.
+*/
+
 /* package codechef; // don't place package name! */
 
 import java.util.*;
