@@ -1,0 +1,42 @@
+//package com.kickstart;
+
+//import java.util.Scanner;
+import java.util.*;
+ class Solution {
+	static Scanner scan = new Scanner(System.in);
+	static String swi(char c){
+	switch(c){
+	case 'a': return "Alice.";
+	case 'e': return "Alice.";
+	case 'i': return "Alice.";
+	case 'o': return "Alice.";
+	case 'u': return "Alice.";
+	case 'A': return "Alice.";
+	case 'E': return "Alice.";
+	case 'I': return "Alice.";
+	case 'O': return "Alice.";
+	case 'U': return "Alice.";
+	default: return "Bob.";
+	}
+	
+	}
+	static String solve(String s) {
+	int index = s.length() - 1;
+		if(s.charAt(index) == 'y' ||s.charAt(index) == 'Y' )
+		return "nobody.";
+		else{
+		return swi(s.charAt(index));
+	}
+	}
+public static void  main(String[] args) {	
+		int t = scan.nextInt();
+		int i = 1;
+		while(t-- > 0) {
+		String s = scan.next();
+System.out.println("Case #"+i+": "+s+" is ruled by " +solve(s));
+			i++;
+		}
+		
+		
+}
+}
