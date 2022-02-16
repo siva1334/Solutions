@@ -32,3 +32,29 @@ class Solution {
         
     }
 }
+public class Main {
+public static void  main(String[] args) {	
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("enter the size of the list: ");
+		
+		
+		int size = scan.nextInt();
+		
+		System.out.println("enter the k: ");
+		int k = scan.nextInt();
+		
+		ListNode head = new ListNode();
+		ListNode temp = head;
+		
+		for(int i = 0; i < size; i++) {
+			temp.val = scan.nextInt();
+			temp.next = new ListNode();
+			temp = temp.next;
+		}
+		
+		Solution obj = new Solution();
+		ListNode middle = obj. middleNode(head);
+	}
+
+}
