@@ -43,29 +43,33 @@ Case #1: 1 1 2
 Case #2: 1 1 2 2 2 3
 */
 
+//package com.kickstart;
+
 import java.util.*;
 
 public class Solution {
 	
 static Scanner scan = new Scanner(System.in);
-static int solve2(int a[], int index, int val) {
-	int count = 0;
-	for(int i = 0; i <= index; i++) {
-		if(a[i] > val)
-			count++;
-	}
-	if(count > val)
-		return val+1;
-	else return val;
-}
 	static void solve() {
 		int n = scan.nextInt();
-		int a[] = new int[n];
-		int val = 1;
+		int a[] = new int[100001];
+		int size = 0;
+		int current = 1;
+		
 		for(int i = 0; i < n; i++) {
-			a[i] = scan.nextInt();
-			val = solve2(a, i , val );
-			System.out.print(val + " ");
+			int val = scan.nextInt();
+			if(val >= current) {
+				size++;
+				a[val]++;				
+			}
+			if(size >= current) {
+				System.out.print(current + " ");
+				size -= a[current];
+				current++;				
+			}
+			else {
+				System.out.print((current - 1) + " ");
+			}
 		}
 	}
 public static void  main(String[] args) {	
