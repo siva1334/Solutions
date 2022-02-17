@@ -1,0 +1,82 @@
+package com.Leetcode;
+/*
+ * Given the head of a linked list,
+ *  remove the nth node from the end of the list and return its head.
+ */
+import java.util.Scanner;
+
+class ListNode {
+      int val;
+      ListNode next;
+      ListNode() {}
+      ListNode(int val) { this.val = val; }
+      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+  }
+ 
+class Solution {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        
+
+        ListNode pointerOne = head; 
+        ListNode pointerTwo = head; 
+        int len = 1;
+        
+        while(len < n){
+            pointerOne = pointerOne.next;
+            len++;
+        }
+        
+        ListNode prev = head;
+        len = 1;
+        
+        while(pointerOne.next != null){
+            
+            pointerOne = pointerOne.next;           
+            prev = pointerTwo;
+            pointerTwo = pointerTwo.next;
+            len++;
+        }
+        
+        if(len == 1)
+            return head.next;
+        
+        else{
+        prev.next = pointerTwo.next;
+        return head;
+        }
+    }
+}
+public class RemoveElement {
+	
+public static void  main(String[] args) {	
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("enter the size of the list: ");
+		
+		
+		int size = scan.nextInt();
+		
+		System.out.println("enter the n: ");
+		int n = scan.nextInt();
+		
+		ListNode head = new ListNode();
+		ListNode temp = head;
+		
+		for(int i = 0; i < size; i++) {
+			temp.val = scan.nextInt();
+			temp.next = new ListNode();
+			temp = temp.next;
+		}
+		
+		Solution obj = new Solution();
+		head = obj.removeNthFromEnd(head,n);
+		
+		for(int i = 0; i < n ; i++)
+		{
+			System.out.println(head.val);
+			head = head.next;
+		}
+		
+	}
+}
+
