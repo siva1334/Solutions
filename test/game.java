@@ -71,7 +71,7 @@ public class Game {
 		if (flag) {
 			ans = "" + (char) ('0' + val1) + c1 + (char) ('0' + val2) + c2 + (char) ('0' + val3) + c3
 					+ (char) ('0' + a[3]);
-			System.out.println(ans);
+			System.out.println("equation = " + ans);
 			System.exit(0);
 		}
 	}
