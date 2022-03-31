@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Game {
 
-	 int target;
-	 String ans = "";
+	int target;
+	String ans = "";
 
 	void stageThree(int a[], int val, int val1, int val2, int val3, String c1, String c2, boolean signal) {
 
@@ -67,10 +67,10 @@ public class Game {
 	}
 
 	void stageTwo(int a[], int val, int val1, int val2, String c1, boolean signal) {
-			
+
 		CrossCheck obj = new CrossCheck(target);
 		obj.crossCheck(a, val, val1, val2, c1);
-		
+
 		if (val >= a[2] && val % a[2] == 0) {
 			stageThree(a, val / a[2], val1, val2, a[2], c1, "/", false);
 		}
@@ -133,7 +133,5 @@ public class Game {
 			}
 		}
 	}
-
-	
 
 }
