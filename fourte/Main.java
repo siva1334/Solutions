@@ -10,14 +10,11 @@ package com.fourte;
 
 import java.util.Scanner;
 
-
-
 public class Main {
-	
+
 	public static void main(String[] args) {
 
 		Scanner scan = new Scanner(System.in);
-		
 
 		int a[] = new int[4];
 
@@ -29,19 +26,17 @@ public class Main {
 
 		Game obj = new Game();
 		System.out.println("enter the target value: ");
-			obj.target= scan.nextInt();
+		obj.target = scan.nextInt();
 
 		int temp[] = new int[4];
 
-		
 		for (int i = 0; i < 4; i++) {
 			temp[0] = a[i];
 			obj.step2(a, temp, i);
 
 		}
-	
+
 		scan.close();
 	}
-
 
 }
