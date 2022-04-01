@@ -1,6 +1,6 @@
 package com.fourte;
 
-import java.util.Scanner;
+
 
 public class Game {
 
@@ -61,7 +61,7 @@ public class Game {
 			}
 
 			System.out.println("equation = " + ans);
-			System.exit(0);
+			//System.exit(0);
 
 		}
 	}
@@ -70,6 +70,7 @@ public class Game {
 
 		CrossCheck obj = new CrossCheck(target);
 		obj.crossCheck(a, val, val1, val2, c1);
+		
 
 		if (val >= a[2] && val % a[2] == 0) {
 			stageThree(a, val / a[2], val1, val2, a[2], c1, "/", false);
