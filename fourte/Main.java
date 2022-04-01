@@ -7,6 +7,7 @@ package com.fourte;
 //3 1 8 4 value = 12
 //5 4 9 9 value = 101
 //6 4 3 2 value = 42
+//7 9 1 5 value = 31
 
 import java.util.Scanner;
 
@@ -33,7 +34,6 @@ public class Main {
 		for (int i = 0; i < 4; i++) {
 			temp[0] = a[i];
 			obj.step2(a, temp, i);
-
 		}
 
 		scan.close();
